@@ -1,0 +1,33 @@
+{
+  "name": "Moon Pong Game",
+  "short_name": "Moon Pong",
+  "description": "Play classic Pong with a moon paddle! Control with mouse or arrow keys.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "landscape",
+  "theme_color": "#111c2b",
+  "background_color":  "#111c2b",
+  "icons": [
+    {
+      "src": "https://emojicdn.elk.sh/🌙?size=192",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src":  "https://emojicdn.elk.sh/🌙? size=512",
+      "sizes": "512x512",
+      "type":  "image/png",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["games"],
+  "screenshots": [
+    {
+      "src": "https://emojicdn.elk.sh/🌙?size=512",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

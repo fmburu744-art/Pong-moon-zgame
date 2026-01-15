@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moon Pong Game</title>
+  
+  <!-- PWA Manifest & Theme -->
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="moon-icon-192.png">
+  <meta name="theme-color" content="#0a1428">
+  
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- STARFIELD BACKGROUND -->
+  <div id="starfield"></div>
+
+  <!-- START PAGE -->
+  <div id="start-page" class="page active">
+    <div class="start-container">
+      <div class="moon-big">🌙</div>
+      <h1>MOON PONG</h1>
+      <p class="by-line">by Francis Mburu</p>
+      
+      <div class="instructions">
+        <p>🎮 Control the left paddle with: </p>
+        <p>• Mouse movement</p>
+        <p>• Arrow Keys (↑ ↓)</p>
+        <p style="margin-top: 20px;">⭐ Win 5 points to defeat the AI</p>
+        <p>📈 Each level gets harder!</p>
+      </div>
+      
+      <button id="start-btn" class="btn-start">START GAME</button>
+    </div>
+  </div>
+
+  <!-- GAME PAGE -->
+  <div id="game-page" class="page">
+    <div class="game-header">
+      <div class="level-info">Level <span id="level-num">1</span></div>
+      <div class="score-display">
+        <span id="player-score">0</span> :  <span id="ai-score">0</span>
+      </div>
+      <div class="level-info">First to 5! </div>
+    </div>
+    
+    <div class="game-container">
+      <canvas id="pong"></canvas>
+    </div>
+    
+    <div class="game-footer">
+      <p id="game-status">Playing...</p>
+    </div>
+  </div>
+
+  <!-- WIN MODAL -->
+  <div id="win-modal" class="modal hidden">
+    <div class="modal-content win-content">
+      <div class="modal-emoji">🎉</div>
+      <h2>YOU WIN!</h2>
+      <p id="win-text">Level 1 Complete! </p>
+      <div class="modal-buttons">
+        <button id="next-btn" class="btn-modal btn-success">NEXT LEVEL</button>
+        <button id="menu-btn-win" class="btn-modal btn-secondary">MAIN MENU</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOSE MODAL -->
+  <div id="lose-modal" class="modal hidden">
+    <div class="modal-content lose-content">
+      <div class="modal-emoji">😢</div>
+      <h2>GAME OVER!</h2>
+      <p id="lose-text">The AI was too strong.</p>
+      <div class="modal-buttons">
+        <button id="retry-btn" class="btn-modal btn-primary">RETRY LEVEL</button>
+        <button id="menu-btn-lose" class="btn-modal btn-secondary">MAIN MENU</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
